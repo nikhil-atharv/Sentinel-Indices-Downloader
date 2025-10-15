@@ -11,3 +11,4 @@ matplotlib
 leafmap
 numpy
 localtileserver
+pkg_resources
