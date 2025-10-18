@@ -16,3 +16,4 @@ folium
 localtileserver
 setuptools
 streamlit_folium
+psutil
