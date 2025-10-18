@@ -10,8 +10,10 @@ geopandas
 pandas
 matplotlib
 leafmap
+io
+streamlit
+streamlit_folium
 folium
 numpy
 localtileserver
-pkg_resources
 gdal
