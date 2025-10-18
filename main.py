@@ -98,7 +98,7 @@ if not uploaded_file is None:
                     index = None 
                     )
         
-        if selector != None: 
+        if selector != 'None': 
 
             indices_name = selector.lower()
 
@@ -136,53 +136,7 @@ if not uploaded_file is None:
             map.add_raster(indices, colormap = indices_cmap, nodata = np.nan, 
                            layer_name = indices_name)
 
-            map.to_streamlit()
-
-
-
-            # Convert xarray DataArray to numpy array and normalize for visualization
-            indices_np = indices.values
-
-            # Handle NaN values (replace with 0 for visualization)
-            indices_np = np.nan_to_num(indices_np, nan = -9999999)
-
-            # Get bounds in lat-lon format
-            minx, miny, maxx, maxy = indices.rio.bounds()
-            bounds = [[miny, minx], [maxy, maxx]]
-
-            # Normalize NDVI/EVI to 0–255 for rendering (optional but helps visualization)
-            indices_min, indices_max = np.nanmin(indices_np), np.nanmax(indices_np)
-            normalized = (indices_np - indices_min) / (indices_max - indices_min)
-            normalized = (normalized * 255).astype(np.uint8)
-
-            # Create a Folium map centered on ROI
-            center_lat = (miny + maxy) / 2
-            center_lon = (minx + maxx) / 2
-
-            m = folium.Map(location = [center_lat, center_lon], zoom_start = 14)
-
-            # Add image overlay
-            folium.raster_layers.ImageOverlay(
-                image = indices_np,
-                bounds = bounds,
-                colormap = lambda x: (0, x, 0, x),  # simple green colormap (can customize)
-                opacity = 0.7,
-                name = 'Index Map'
-            ).add_to(m)
-
-            folium.TileLayer(
-            tiles='https://mt1.google.com/vt/lyrs=s&x={x}&y={y}&z={z}',
-            attr='Google Satellite',
-            name='Google Satellite',
-            overlay=False,
-            control=True
-             ).add_to(m)
-
-            # Add layer control
-            folium.LayerControl().add_to(m)
-
-            # Render in Streamlit
-            st_folium(m, width=700, height=500)    
+            map.to_streamlit()   
 
             ##Download Button
 
