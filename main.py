@@ -98,7 +98,7 @@ if not uploaded_file is None:
                     index = None 
                     )
         
-        if selector != None: 
+        if selector != 'None': 
 
             indices_name = selector.lower()
 
@@ -196,4 +196,5 @@ if not uploaded_file is None:
 else:
 
     st.stop()
+
 
