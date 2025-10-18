@@ -9,7 +9,7 @@ import xarray
 import xrspatial
 import rasterio
 import rioxarray
-import leafmap as leafmap
+import leafmap.foliumap as leafmap
 import matplotlib.pyplot as plt
 import os
 import zipfile
