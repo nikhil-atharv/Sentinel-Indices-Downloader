@@ -17,3 +17,4 @@ localtileserver
 setuptools
 streamlit_folium
 psutil
+jupyter-server-proxy
