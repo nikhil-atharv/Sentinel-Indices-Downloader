@@ -186,6 +186,14 @@ if not uploaded_file is None:
                         mime = 'image/tiff'
                     )
 
+        else:
+            st.stop()
+    else:
+        st.stop()
+    
+else:
+
+    st.stop()
 
 
 
