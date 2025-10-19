@@ -21,9 +21,6 @@ import tempfile
 from streamlit_folium import st_folium
 import folium
 
-import os
-os.environ['LOCALTILESERVER_CLIENT_PREFIX'] = 'proxy/{port}'
-
 st.title('Geospatial Data Downloader')
 st.text('This Application will help you download MSI, NDVI and EVI with one click for your Region of Interest')
 
@@ -197,6 +194,7 @@ if not uploaded_file is None:
 else:
 
     st.stop()
+
 
 
 
