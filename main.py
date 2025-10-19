@@ -124,8 +124,6 @@ if not uploaded_file is None:
 
             indices = indices_calculator(indices_name)
 
-            import leafmap.foliumap as leafmap
-
             from matplotlib.colors import ListedColormap
 
             indices_cmap = ListedColormap(['blue', 'yellow', 'green'])
@@ -199,6 +197,7 @@ if not uploaded_file is None:
 else:
 
     st.stop()
+
 
 
 
