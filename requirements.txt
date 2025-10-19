@@ -18,3 +18,4 @@ setuptools
 streamlit_folium
 psutil
 jupyter-server-proxy
+lonboard
