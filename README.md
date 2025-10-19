@@ -1,6 +1,9 @@
 # Geospatial Data Downloader
 A user-friendly Streamlit application to download MSI (Sentinel-2 MultiSpectral Instrument), NDVI, and EVI geospatial datasets for your custom region of interest. Upload a region as a KML, GeoPackage, or GeoJSON, set your desired query dates, select vegetation indices, visualize interactively, and export results with one click.
 
+<img width="1920" height="2230" alt="screencapture-sentinel-indices-downloader-fhrjaffmt7bud9xh94bzjq-streamlit-app-2025-10-19-13_05_00" src="https://github.com/user-attachments/assets/e1b0de37-64ba-459d-a5d6-0beb7263e344" />
+
+
 ## Features
 - Upload ROI as KML, GeoPackage, or GeoJSON
 - Automated download of Sentinel-2 imagery (MSI) for specified dates and clouds <5%
