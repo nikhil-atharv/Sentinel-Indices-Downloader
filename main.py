@@ -9,7 +9,7 @@ import xarray
 import xrspatial
 import rasterio
 import rioxarray
-import leafmap.deckgl as leafmap
+import leafmap as leafmap
 import matplotlib.pyplot as plt
 import os
 import zipfile
@@ -197,6 +197,7 @@ if not uploaded_file is None:
 else:
 
     st.stop()
+
 
 
 
